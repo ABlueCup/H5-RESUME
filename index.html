@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/index.min.css">
+    <!-- rem -->
+    <script>
+        //根据当前设备的宽度，动态计算出rem的换算比例，实现页面中元素的等比缩放
+        (function anonymous() {
+            let computedREM = function computedREM() {
+                //
+                let winW = document.documentElement.clientWidth,
+                    desW = 640;
+                if (winW < desW) {
+                    document.documentElement.style.fontSize = winW / desW * 100 + 'px';
+                }
+            }
+            computedREM();
+            window.addEventListener('resize', computedREM);
+        })();
+    </script>
+    <script src="./js/prefixfree.min.js"></script>
+</head>
+
+<body>
+    <main class="mainBox">
+        <!-- 外面套一层mainbox,控制当前页面的最大宽度，防止把做好的页面在PC端预览的时候满屏展示，这样字体和盒子大小等被肆意拉伸 -->
+        <section class="loadingBox">
+            <!-- loading -->
+            <div class="title">
+                <h1>Personal</h1>
+                <h2>H5场景交互型简历</h2>
+            </div>
+            <div class="progress">
+                <!-- 进度条 -->
+                <div class="currentProgress"></div>
+                <!-- <div class="nextProgress"></div> -->
+            </div>
+        </section>
+
+        <!-- phone -->
+        <section class="phoneBox">
+            <h2><img src="./img/zf_phoneLogo.png" alt="" srcset="">
+                <span>00:00</span></h2>
+
+            <div class="answer">
+                <div class="markMove"></div>
+                <a href="javascript:;" class="markLink"></a>
+            </div>
+
+            <div class="hangUp">
+                <a href="javascript:;" class="markLink"></a>
+            </div>
+            <!-- audio -->
+            <audio src="./audio/bell.mp3" loop id="answerBell">你的浏览器不支持audio标签</audio>
+            <audio src="./audio/say.mp3" preload="none" id="introduction"></audio>
+        </section>
+
+        <!-- message -->
+        <section class="messageBox">
+            <ul class="wrapper clearfix">
+                <li class="self">
+                    <i class="arrow"></i>
+                    <img src="./img/zf_messageStudent.png" alt="" class="pic">
+                    面试官，你好，我叫彭威振。来自于河南商丘，毕业于2019年郑州轻院，学习的是环境工程专业，到目前为止工作6年，一直从事前端开发工作
+                </li>
+                <li class="inter">
+                    <i class="arrow"></i>
+                    <img src="./img/zf_messageLogo.png" alt="" class="pic">
+                    哇塞，好牛逼。介绍一下你的基本技能
+                </li>
+                <!-- 自己多加了一条 -->
+                <li class="self">
+                    <i class="arrow"></i>
+                    <img src="./img/zf_messageStudent.png" alt="" class="pic">
+                    本人擅长原生JS、ES6、Promise等设计模式、组件和插件封装，看过JQ源码，可以开发各种hybrid混合APP
+
+                </li>
+                <li class="inter">
+                    <i class="arrow"></i>
+                    <img src="./img/zf_messageLogo.png" alt="" class="pic">
+                    框架会吗，我们在用VUE和REACT
+                </li>
+                <li class="self">
+                    <i class="arrow"></i>
+                    <img src="./img/zf_messageStudent.png" alt="" class="pic">
+                    之前公司使用的是react开发，个人对于react渲染原理、MVC模式、SPA单页面应用、DIFF差异渲染机制以及REDUX原理等有研究，掌握熟练，对于VUE之前也做过，可以快速上手
+
+                </li>
+                <li class="inter">
+                    <i class="arrow"></i>
+                    <img src="./img/zf_messageLogo.png" alt="" class="pic">
+                    WEPACK会吗
+                </li>
+                <li class="self">
+                    <i class="arrow"></i>
+                    <img src="./img/zf_messageStudent.png" alt="" class="pic">
+                    之前项目都是基于脚手架完成的，自己偶尔回去修改一些webpack配置项
+                </li>
+                <li class="self">
+                    <i class="arrow"></i>
+                    <img src="./img/zf_messageStudent.png" alt="" class="pic">
+                    目前正在深入研究，可以搭建简单的脚手架
+
+                </li>
+                <li class="self">
+                    <i class="arrow"></i>
+                    <img src="./img/zf_messageStudent.png" alt="" class="pic">
+                    同时对于node/express等后台开发也有所涉猎，只是没有应用到项目实战中，目前也在研究，对这个比较感兴趣
+
+                </li>
+                <li class="inter">
+                    <i class="arrow"></i>
+                    <img src="./img/zf_messageLogo.png" alt="" class="pic">
+                    你的优点是什么，和其他人相比，公司为什么要录用你
+                </li>
+                <li class="self">
+                    <i class="arrow"></i>
+                    <img src="./img/zf_messageStudent.png" alt="" class="pic">
+                    肯吃苦、肯加班、能力高、要钱少。。。这些够吗？
+
+                </li>
+                <li class="inter">
+                    <i class="arrow"></i>
+                    <img src="./img/zf_messageLogo.png" alt="" class="pic">
+                    就是你了，明天来上班
+                </li>
+
+            </ul>
+
+            <div class="keyboard">
+                <span></span>
+                <a href="javascript:;" class="submit"></a>
+            </div>
+        </section>
+        <!--CUBE-->
+        <section class="cubeBox">
+            <ul class="cube">
+                <li><img src="img/zf_cube1.png" alt=""></li>
+                <li><img src="img/zf_cube2.png" alt=""></li>
+                <li><img src="img/zf_cube3.png" alt=""></li>
+                <li><img src="img/zf_cube4.png" alt=""></li>
+                <li><img src="img/zf_cube5.png" alt=""></li>
+                <li><img src="img/zf_cube6.png" alt=""></li>
+            </ul>
+            <img src="img/zf_cubeTip.png" alt="" class="tip">
+        </section>
+
+        <!-- DETAILS -->
+        <section class="detailBox">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide page1">
+                        <!-- 第一页 -->
+                        <dl>
+                            <dt>课程大纲</dt>
+                            <dd><em>01</em><a href="#">HTML(5)+CSS(3)+移动端响应式布局开发及相关插件的使用</a></dd>
+                            <dd><em>02</em><a href="#">JS中的闭包及堆栈内存以及this的处理</a></dd>
+                            <dd><em>03</em><a href="#">JS中的面向对象编程，可以基于面向对象封装组件和插件等</a></dd>
+                            <dd><em>04</em><a href="#">ES6中的新特性及数组对象里面的方法</a></dd>
+                            <dd><em>05</em><a href="#">JS中的同步异步编程及promise处理模式</a></dd>
+                            <dd><em>06</em><a href="#">JS中的事件委托及事件池，及发布订阅设计模式</a></dd>
+                            <dd><em>07</em><a href="#">JS中的DOM操作以及重绘和回流的优化</a></dd>
+                            <dd><em>08</em><a href="#">HTTP交互及AJAX封装以及跨域数据共享</a></dd>
+                            <dd><em>09</em><a href="#">VUE:VUE-CLI/VUE-ROUTE/VUEX/VUE ELEMENT全家桶</a></dd>
+                            <dd><em>010</em><a href="#">REACT:REACT-ROUTE/REACT-REDUX/DVA/AXIOS/ANT...</a></dd>
+                            <dd><em>011</em><a href="#">辅助技能，node/wepack/git等</a></dd>
+                        </dl>
+                    </div>
+                    <div class="swiper-slide page2">
+                        <h2>课程体系</h2>
+                        <img src="./img/zf_course1.png" alt="">
+                        <img src="./img/zf_course2.png" alt="">
+                        <img src="./img/zf_course3.png" alt="">
+                        <img src="./img/zf_course4.png" alt="">
+                        <img src="./img/zf_course5.png" alt="">
+                        <img src="./img/zf_course6.png" alt="">
+                        <img src="./img/zf_course.png" alt="">
+                    </div>
+                    <div class="swiper-slide page3">
+                        <a href="javascript:;" class="returnBack"><img src="./img/zf_return.png" alt=""></a>
+                        <h2><span>名师云集</span><span>人才摇篮</span></h2>
+
+                        <div class="teacherBox">
+                            <div class="teacher"><img src="img/zf_teacher1.png" alt=""><span>周啸天</span>
+                                <div>昨天晚上看了会《贫嘴张大民的幸福生活》，看得掉眼泪，又想起以前的很多事</div>
+                            </div>
+                            <div class="teacher"><img src="img/zf_teacher2.png" alt=""><span>张仁阳</span>
+                                <div>昨天晚上看了会《贫嘴张大民的幸福生活》，看得掉眼泪，又想起以前的很多事</div>
+                            </div>
+                            <div class="teacher"><img src="img/zf_teacher3.jpg" alt=""><span>姜文</span>
+                                <div>昨天晚上看了会《贫嘴张大民的幸福生活》，看得掉眼泪，又想起以前的很多事</div>
+                            </div>
+                            <div class="teacher"><img src="img/zf_teacher4.png" alt=""><span>田喜</span>
+                                <div>昨天晚上看了会《贫嘴张大民的幸福生活》，看得掉眼泪，又想起以前的很多事</div>
+                            </div>
+                            <div class="teacher"><img src="img/zf_teacher5.png" alt=""><span>张亚海</span>
+                                <div>昨天晚上看了会《贫嘴张大民的幸福生活》，看得掉眼泪，又想起以前的很多事</div>
+                            </div>
+                            <div class="teacher"><img src="img/zf_teacher6.png" alt=""><span>郭永健</span>
+                                <div>昨天晚上看了会《贫嘴张大民的幸福生活》，看得掉眼泪，又想起以前的很多事</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide page4">
+                        <a href="javascript:;" class="returnBack"></a>
+                        <p>没有招生部门<br>但学生数量<span>每年翻一番</span></p>
+                        <p>没有就业部门<br>但学生的平均工资<span>超过一万二</span></p>
+                        <h2>就业信息</h2>
+                        <div>
+                            123456789
+                        </div>
+                    </div>
+                    <div class="swiper-slide page5">
+                        <a href="javascript:;" class="returnBack"></a>
+                        <div class="textArea"><span>让梦想燃烧！</span><br><span>嘿，这里发展不错！</span></div>
+                        <div class="imagesArea">
+                            <img src="./img/zf_style1.jpg" alt="">
+                            <img src="./img/zf_style2.jpg" alt="">
+                            <img src="./img/zf_style3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide page6">
+                        <a href="javascript:;" class="returnBack"></a>
+                        <div class="title">
+                            <p>联系我们</p>
+                            <p>contact us</p>
+                        </div>
+
+                        <div class="contentArea">
+                            <div class="content clearfix">
+                                <div><img src="./img/zf_concatPhone.png" alt=""></div>
+                                <div><span>QQ:</span>1045496972<br><span>TEL:</span>+861<br><span>手机：</span>136</div>
+                            </div>
+                            <div class="content clearfix">
+                                <div><img src="./img/zf_concatAddress.png" alt=""></div>
+                                <div><span>学校地址：</span><br>河南省夏邑县北镇乡前彭沟涯村</div>
+                            </div>
+                        </div>
+                        <div class="map"><img src="./img/zf_concatInfo.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/zepto.min.js"></script> <!-- zepto是应用于移动端开发，用法跟jquery类似 -->
+    <script src="./js/swiper-3.4.2.jquery.min.js"></script>
+    <!-- <script src="./js/swiper-3.4.2.min.js"></script> -->
+    <script src="./js/makisu.min.js"></script>
+    <script src="./js/index.js"></script>
+    <!-- 
+        1,在github上创建空仓库
+        2，settings -> github pages -> choose a theme -> 随便选择（反正和我们的也不一样）select theme -> commit changes->此时仓库就不是空的了
+        3,把当前仓库克隆到本地
+     -->
+       
+</body>
+
+</html>
